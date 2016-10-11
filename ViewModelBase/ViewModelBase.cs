@@ -11,6 +11,8 @@ namespace ViewModelBase
 {
 
 	/**
+	 * 2016-10-11 Copied the code and started a Portable Class Library for use in Xamarin Forms
+	 * --------- End of Change Log --------
 	*  This was included with some other code I got:  http://blog.thekieners.com/2010/09/08/relativesource-binding-with-findancestor-mode-in-silverlight/
 */
 	public abstract class ViewModelBase : INotifyPropertyChanged
@@ -128,8 +130,10 @@ namespace ViewModelBase
 			if (value == null && !propertyInfo.CanWrite)
 			{
 				var propTypeInfo = propertyInfo.PropertyType.GetTypeInfo();
+				var genericTypeDef = propertyInfo.PropertyType.GetGenericTypeDefinition();
 				//bool isGenericType = propertyInfo.PropertyType.IsGenericType; // this is the way it used to work
 				bool isGenericType = propTypeInfo.IsGenericType;
+				var genericArgs = genericTypeDef.GenericTypeArguments;
 
 				if (isGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(ObservableCollection<>))
 				{
@@ -141,7 +145,7 @@ namespace ViewModelBase
 				}
 				else if (isGenericType && propertyInfo.PropertyType.GetGenericTypeDefinition() == typeof(IEnumerable<>))
 				{
-					Type observableCollectionType = typeof(ObservableCollection<>).MakeGenericType(propertyInfo.PropertyType.GetGenericArguments());
+					Type observableCollectionType = typeof(ObservableCollection<>).MakeGenericType(genericArgs);
 					value = (T)Activator.CreateInstance(observableCollectionType);
 				}
 				else if (propertyInfo.PropertyType == typeof(System.Collections.IEnumerable))
