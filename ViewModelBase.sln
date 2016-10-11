@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ViewModelBase", "ViewModelBase\ViewModelBase.csproj", "{30432F35-3D4F-43BA-80E6-251BEE9A406F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{731675A1-2AF8-4CB5-8C93-ADAD3847B4FB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{30432F35-3D4F-43BA-80E6-251BEE9A406F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30432F35-3D4F-43BA-80E6-251BEE9A406F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30432F35-3D4F-43BA-80E6-251BEE9A406F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{731675A1-2AF8-4CB5-8C93-ADAD3847B4FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{731675A1-2AF8-4CB5-8C93-ADAD3847B4FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{731675A1-2AF8-4CB5-8C93-ADAD3847B4FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{731675A1-2AF8-4CB5-8C93-ADAD3847B4FB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
