@@ -6,7 +6,7 @@
 <package >
   <metadata>
     <id>ViewModelBase</id>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <authors>nathaniel</authors>
     <owners>AECC</owners>
     <description>This package provides a base View Model.  It implements the INotifyPropertyChanged interface</description>
@@ -19,6 +19,6 @@
   </metadata>
   <files>
 		<!-- using lib as target and not lib/net45 because we want this package to work with multiple frameworks -->
-  	<file src="bin/debug/ViewModelBase.dll" target="lib/net45" />
+  	<file src="bin/debug/ViewModelBase.dll" target="lib/portable45-net45+win8+wp8+wpa81" />
   </files>
  </package>
