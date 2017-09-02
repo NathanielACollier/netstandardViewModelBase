@@ -2,7 +2,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
     <PackageTargetFallback>$(PackageTargetFallback);portable-win+net45+wp8+win81+wpa8</PackageTargetFallback>
-    <Version>1.0.4</Version>
+    <Version>1.0.5</Version>
     <Authors>Nathaniel Collier</Authors>
     <Company>AECC</Company>
     <Description>This package provides a base View Model.  It implements the INotifyPropertyChanged interface</Description>
